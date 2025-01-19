@@ -1,0 +1,27 @@
+
+"""
+"""
+
+def f(*args, **wargs):
+	"""
+	"""
+	if len(wargs) != 0: print('Pass uri list by args'); raise NotImplemented
+	r = []
+	folders = []
+	flag = False
+	lasts = {}
+	for line in args[0].split('\n'):
+		if line.strip() == '':
+			continue
+		import os
+		if line[0] == '/':
+			folders += [line]
+			if folders[-1] != os.path.dirname(folders[-2]):
+				os.path.dirname(folders[-1])
+				flag = True
+		elif flag and os.path.isfile(os.path.join(folders[-1][:-1], line[:])):
+			if folders[-1] is not lasts:
+				lasts[folders[-1]] = []
+			lasts[folders[-1]] += [os.path.join(folders[-1][:-1], line[:])]
+			flag = False
+	return r

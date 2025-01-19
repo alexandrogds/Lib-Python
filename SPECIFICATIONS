@@ -1,0 +1,4 @@
+ [x] map last subfolders to a Class with name of last subfolder.
+ [ ] MAKE THIS FIRST: map all to all folders with all subfolders with split name of files in '_'.
+ [ ] WARNING: names of files are one word.
+ [ ] run before publish reindent
