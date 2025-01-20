@@ -8,9 +8,9 @@ setup(
     packages=['core'],
     install_requires=[
         'requests',
-		'',
-		'',
-		'',
+		'opencv-python',
+		'numpy',
+		'scikit-learn',
 		''
     ],
 )
